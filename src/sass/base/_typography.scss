@@ -1,0 +1,32 @@
+body {
+    // font-family: SukhumvitSet-Medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.heading--primary {
+    color: #2b2b2b;
+    font-size: 2.5rem;
+}
+
+.heading--secondary {
+    font-size: 2rem;
+    font-weight: 600;
+    display: inline-block;
+}
+.paragraph {
+    &--white {
+    }
+
+    &--large {
+        font-size: 1.5rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}

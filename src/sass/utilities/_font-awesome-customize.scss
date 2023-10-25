@@ -1,0 +1,14 @@
+.fas-angle {
+    margin-top: 6px;
+
+    transform: scale(1.4);
+    &:hover:not([class*="--inactive"]) {
+        cursor: pointer;
+    }
+
+    &:active:not([class*="--inactive"]) {
+    }
+
+    &--inactive {
+    }
+}
