@@ -25,8 +25,15 @@ body {
     overflow-x: hidden;
 }
 
-.navbar-and-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+li { 
+  	list-style-type: none;
+}
+
+.page { 
+	background-color: $color-background-dark-1;
+}
+
+section { 
+	margin: 3rem;
 }

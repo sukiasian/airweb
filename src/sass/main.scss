@@ -7,11 +7,16 @@
 @import "./components/alerts";
 @import "./components/validators";
 @import "./components/canvas";
+@import "./components/navbar";
+@import "./components/buttons";
+@import "./components/cards";
+@import "./components/forms";
 
 @import "./layout/flex";
 
 @import "./utilities/utilities";
 @import "./utilities/font-awesome-customize";
 @import "./utilities/atomic";
+@import "./utilities/keyframes";
 
-@import "./pages/home";
+@import "./pages/landing-page";

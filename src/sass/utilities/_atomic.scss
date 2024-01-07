@@ -1,3 +1,17 @@
 .pointer { 
 	cursor: pointer;
 }
+
+.absolute-left {
+	position: absolute;
+	left: 0;
+}
+
+.absolute-right {
+	position: absolute;
+	right: 0;
+}
+
+.margin-top-large { 
+	margin-top: 9rem;
+}

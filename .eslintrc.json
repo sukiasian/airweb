@@ -26,6 +26,8 @@
         "require-await": "error",
 		"semi": ["warn", "always"],
 		"@typescript-eslint/semi": ["off"],
+		"@typescript-eslint/prefer-nullish-coalescing": ["off"],
+		"@typescript-eslint/strict-boolean-expressions": ["off"],
         "arrow-spacing": "warn",
         "no-empty": "warn",
         "no-trailing-spaces": [

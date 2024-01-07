@@ -1,5 +1,5 @@
-import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
     mode: 'development',
@@ -22,6 +22,14 @@ module.exports = {
             {
                 test: /\.(s*)css$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.svg$/,
+                use: 'svg-sprite-loader'
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                type: 'asset/resource'
             }
         ]
     },
@@ -30,20 +38,22 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
     },
     devServer: {
         port: 3000,
         host: '127.0.0.1',
-        open: true
+        open: true,
+        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html'),
-            title: 'Storylines | Картины нитями',
+            title: 'Airweb Development Agency - Get the maximum from tech',
             filename: 'index.html',
             inject: 'body',
             minify: 'auto'
         })
     ]
-}
+};
