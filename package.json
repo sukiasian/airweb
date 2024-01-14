@@ -5,12 +5,12 @@
 	"main": "dist/index.js",
 	"author": "Sam Sukiasian",
 	"license": "ISC",
-	"proxy": "http://127.0.0.1:5000",
 	"scripts": {
 		"serve": "webpack serve",
 		"build:dev": "webpack-cli",
 		"build:prod": "./node_modules/webpack/bin/webpack.js --mode production"
 	},
+	"proxy": "http://localhost:5000",
 	"devDependencies": {
 		"@babel/cli": "^7.1.0",
 		"@babel/core": "^7.1.0",
@@ -60,6 +60,7 @@
 		"webpack-env": "^0.8.0"
 	},
 	"dependencies": {
+		"axios": "^1.6.5",
 		"file-loader": "^6.2.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
