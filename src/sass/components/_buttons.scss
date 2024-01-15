@@ -32,6 +32,13 @@ button {
 		a {
 			color: white;
 		}
+
+		@include respond(phone) {
+			padding: 1.2rem 0.5rem;
+			width: 55px;
+			height: 55px;
+			border-radius: 70px;
+		}
 	}
 
 	&--disabled {
@@ -45,6 +52,14 @@ button {
 		width: 150px;
 		height: 150px;
 		border-radius: 200px;
+
+		@include respond(tab-port) {
+		}
+
+		@include respond(phone) {
+			width: 100px;
+			height: 100px;
+		}
 	}
 }
 

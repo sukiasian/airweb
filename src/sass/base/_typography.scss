@@ -1,64 +1,119 @@
 body {
-    // font-family: SukhumvitSet-Medium;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7;
+	// font-family: SukhumvitSet-Medium;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.7;
 }
 
 .heading--primary {
-    color: #2b2b2b;
-    font-size: 4.5rem;
+	color: #2b2b2b;
+	font-size: 4.5rem;
 	line-height: 1.2;
 	text-transform: uppercase;
+
+	@include respond(tab-port) {
+		font-size: 2rem;
+	}
+
+	@include respond(phone) {
+		font-size: 1.1rem;
+	}
+
+	@include respond(tab-land) {
+		font-size: 2.8rem;
+	}
+
 }
 
 .heading--secondary {
-    font-size: 4rem;
-    font-weight: 600;
-    display: inline-block;
+	font-size: 4rem;
+	font-weight: 600;
+	display: inline-block;
+
+	@include respond(tab-port) {
+		font-size: 0.5rem;
+	}
+
+	@include respond(phone) {
+		font-size: 1.5rem;
+	}
 }
+
 .paragraph {
-    &--large {
-        font-size: 2rem;
-    }
+	&--large {
+		font-size: 2rem;
+	}
+
+
+	@include respond(tab-port) {
+		font-size: 1.7rem;
+	}
+
+	@include respond(phone) {
+		font-size: 1.5rem;
+	}
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 	color: black;
 }
 
-.section-heading { 
+.section-heading {
 	display: flex;
 	align-items: center;
+	gap: 20px;
 
-	.red-bullet { 
+	.red-bullet {
 		width: 50px;
 		height: 50px;
 		background-color: pink;
 		border-radius: 10px;
-		margin-right: 20px;
+		margin: 2rem;
+
+		@include respond(tab-port) {
+			width: 40px;
+			height: 40px;
+			margin: 1.5rem;
+		}
+
+		@include respond(phone) {
+			width: 30px;
+			height: 30px;
+			margin: 1.5rem;
+		}
+
+		@include respond(tab-land) {
+			margin: 2rem;
+		}
+
 	}
 
-	& h1 { 
+	& h1 {
 		color: white;
 	}
 }
 
-.paragraph.active { 
-	border-bottom: 2px solid red;
+.paragraph.active {
+	border-bottom: 2px solid rgb(233, 25, 25);
 }
 
-h1, h2, p, img, button, li { 
+h1,
+h2,
+p,
+img,
+button,
+li {
 	-webkit-user-select: none;
- 	-moz-user-select: none;
- 	-ms-user-select: none;
- 	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-.background h1, h2 { 
+.background h1,
+h2 {
 	color: white;
 }

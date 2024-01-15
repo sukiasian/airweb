@@ -1,35 +1,88 @@
-
-.navbar { 
-	&-item { 
+.navbar {
+	&-item {
 		border-bottom: 2px solid transparent;
 
-		&:hover { 
+		&:hover {
 			border-bottom: 2px solid red;
 		}
 	}
 
-	&__services { 
+	&__logo {
+		svg {
+			@include respond(tab-port) {}
+		}
+
+		svg {
+			@include respond(phone) {
+				left: 50px;
+				width: 200px;
+				height: 200px;
+			}
+		}
+	}
+
+
+	&__services {
 		justify-self: end;
 		margin-right: -9rem;
+
+		@include respond(tab-port) {
+			justify-self: start;
+			margin-left: 7rem;
+		}
+
+		@include respond(phone) {
+			justify-self: start;
+			margin-left: 5rem;
+			margin-top: 4rem;
+		}
+
+		@include respond (tab-land) {
+			margin-right: -5rem;
+		}
 	}
 
 	&__team {
 		justify-self: end;
 		margin-right: 5rem;
+
+		@include respond(tab-port) {}
+
+		@include respond(phone) {
+			justify-self: start;
+			margin-bottom: 1.5rem;
+			margin-left: 4.5rem;
+		}
 	}
 
-	&__list { 
-	display: grid; 
-	grid-template-rows: 100px;
-	grid-template-columns: 1fr 1fr 1fr;
-	align-items: center;
-	box-shadow: 0 0 1px 3px rgba(209, 209, 209, 0.2);
-	background-color: $color-background-dark-1;
+	&__list {
+		display: grid;
+		grid-template-rows: 100px;
+		grid-template-columns: 1fr 1fr 1fr;
+		align-items: center;
+		box-shadow: 0 0 1px 3px rgba(209, 209, 209, 0.2);
+		background-color: $color-background-dark-1;
 
-	& * { 
-		color: white;
-		font-weight: 700;
-		font-size: large;
+
+		@include respond(phone) {
+			align-items: right;
+		}
+
+		& * {
+			color: white;
+			font-weight: 700;
+			font-size: large;
+
+			@include respond(tab-port) {
+				font-size: medium;
+				font-weight: 600;
+				align-items: right;
+			}
+
+			@include respond(phone) {
+				font-size: small;
+				font-weight: 500;
+			}
+		}
 	}
-}
 }
