@@ -1,83 +1,88 @@
-button { 
+button {
 	padding: 1rem 1.5rem;
 	border: none;
 	text-transform: uppercase;
 	border-radius: 25px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-
-
-	&:hover { 
+	&:hover {
 		cursor: pointer;
 	}
 }
 
-.button { 
-	font-size:medium;
+.button {
+	font-size: medium;
 	font-weight: 700;
 	padding: 1.2rem 0.5rem;
 	box-shadow: 0 0 1px 3px rgba(209, 209, 209, 0.2);
 
-	&--primary { 
+	&--primary {
 		background-color: $color-primary-blue;
 		color: white;
 		border: 2px solid $color-primary-blue;
 
-		&:hover { 
+		&:hover {
 			animation: fadeOutBlueBackground 0.3s linear both;
 		}
 
-		&:active { 
+		&:active {
 			background-color: $color-primary-blue;
 		}
 
-		a { 
+		a {
 			color: white;
 		}
 	}
 
-	&--round { 
+	&--disabled {
+		background-color: $box-border-color;
+		color: black;
+		border: 2px solid $color-primary-grey;
+		cursor: not-allowed;
+	}
+
+	&--round {
 		width: 150px;
 		height: 150px;
 		border-radius: 200px;
 	}
 }
 
-.contact-us .button--round { 
+.contact-us .button--round {
 	background-color: $color-validator-allowed;
 	color: white;
 
-	&:hover { 
+	&:hover {
 		animation: fadeOutGreenBackground 0.3s linear both;
 	}
 }
 
-.contact-us-form button { 
+.contact-us-form button {
 	margin-top: 1.5rem;
 	align-self: center;
 	width: 50%;
 }
 
 @keyframes fadeOutGreenBackground {
-  from {
-    background-color: $color-validator-allowed; /* Starting color (fully opaque red) */
-  }
+	from {
+		background-color: $color-validator-allowed; /* Starting color (fully opaque red) */
+	}
 
-  to {
-    background-color: transparent; /* Ending color (fully transparent red) */
-	color: $color-validator-allowed;
-	border: 2px solid $color-validator-allowed;
-  }
+	to {
+		background-color: transparent; /* Ending color (fully transparent red) */
+		color: $color-validator-allowed;
+		border: 2px solid $color-validator-allowed;
+	}
 }
 
 @keyframes fadeOutBlueBackground {
-  from {
-    background-color: $color-primary-blue; /* Starting color (fully opaque red) */
-  }
+	from {
+		background-color: $color-primary-blue; /* Starting color (fully opaque red) */
+	}
 
-  to {
-    background-color: transparent; /* Ending color (fully transparent red) */
-	color: $color-primary-blue;
-	border: 2px solid $color-primary-blue;
-  }
+	to {
+		background-color: transparent; /* Ending color (fully transparent red) */
+		color: $color-primary-blue;
+		border: 2px solid $color-primary-blue;
+	}
 }

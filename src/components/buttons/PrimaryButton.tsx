@@ -1,12 +1,21 @@
-import { type MouseEventHandler } from 'react';
+import { MouseEventHandler } from 'react'
 
 interface PrimaryButtonProps {
-    text: string
-    clickHandler?: MouseEventHandler
+	text: string
+	clickHandler?: MouseEventHandler
+	className?: string
 }
 
-const PrimaryButton = ({ text, clickHandler }: PrimaryButtonProps): JSX.Element => {
-    return <button className='button button--primary' onClick={clickHandler}>{text}</button>;
-};
+const PrimaryButton = ({
+	text,
+	clickHandler,
+	className,
+}: PrimaryButtonProps): JSX.Element => {
+	return (
+		<button className={`${className}`} onClick={clickHandler}>
+			{text}
+		</button>
+	)
+}
 
-export default PrimaryButton;
+export default PrimaryButton

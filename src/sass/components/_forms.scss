@@ -1,4 +1,5 @@
-input, textarea { 
+input,
+textarea {
 	border-radius: 20px;
 	color: gray;
 	padding-left: 12px;
@@ -6,32 +7,37 @@ input, textarea {
 	border: 1px solid gainsboro;
 	box-shadow: 0 1px 3px rgba(209, 209, 209, 0.2);
 
-	&:focus { 
+	&:focus {
 		outline: 1px solid red;
 	}
 }
 
-.form { 
+.form {
 	display: flex;
 	flex-direction: column;
 }
 
-.input-container, .text-area-container { 
+.input-container,
+.text-area-container {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 1rem;
 
-	label { 
+	label {
 		margin-left: 8px;
 		align-self: flex-start;
 		margin-bottom: 0.4rem;
 	}
 }
 
-.contact-us-form .text-area-container textarea { 
+.contact-us-form .text-area-container textarea {
 	min-width: 100%;
 	max-width: 100%;
 	min-height: 100px;
 	max-height: 1000px;
 	padding-top: 12px;
+}
+
+.success-image-container {
+	margin-top: 40px;
 }
