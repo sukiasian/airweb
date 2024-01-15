@@ -24,13 +24,10 @@ const VisionCards = (): JSX.Element => {
     return <div className="vision-cards margin-top-large">
         {visionPoints.map((card, i) => {
             return <React.Fragment key={i}>
-                <WhiteCard image={<div style={{
-                    width: '200px',
-                    display: 'flex',
-                    justifyContent: 'center'
-                }}> <svg width={200}>
-                        <use className='vision-card__image' href={card.image} />
-                    </svg></div>
+                <WhiteCard image={
+                    <svg className='vision-card__image'>
+                        <use href={card.image} />
+                    </svg>
                 } title={card.title} description={card.description} />
             </React.Fragment>;
         })}

@@ -127,9 +127,6 @@
 			font-weight: 600;
 		}
 
-		@include respond(tab-land) {
-
-		}
 
 	}
 
@@ -163,10 +160,4 @@
 	svg {
 		width: 150px;
 	}
-
-	@include respond(tab-port) {}
-
-	@include respond(phone) {
-	}
-
 }
