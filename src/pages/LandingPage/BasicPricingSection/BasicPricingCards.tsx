@@ -23,9 +23,11 @@ const BasicPricingCards = (): JSX.Element => {
         {pricingOptions.map((option, i) => {
             return <Fragment key={i}>
                 <NeonCard>
-                    <h2 className='heading heading--secondary'>{option.name}</h2>
-                    <p className='paragraph paragraph--small paragraph--bold'>Starting from</p>
-                    <p className='paragraph paragraph--small'>${option.price}</p>
+					<div className='card-container'>
+						<h2 className='heading heading--secondary'>{option.name}</h2>
+						<p className='paragraph paragraph--small paragraph--bold'>Starting from</p>
+						<p className='paragraph paragraph--small'>${option.price}</p>
+					</div>
                 </NeonCard>
             </Fragment>;
         })}

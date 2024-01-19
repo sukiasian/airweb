@@ -10,14 +10,14 @@ const ServicesCards = (): JSX.Element => {
         },
         {
             name: 'Mobile Applications',
-            image: require('../../../assets/images/services/ai.png'),
+            image: require('../../../assets/images/services/mobile-application.png'),
             description: 'Native iOS and Android applications'
 
         },
         {
             name: 'RESTful API',
             image: require('../../../assets/images/services/api.png'),
-            description: 'Native iOS and Android applications'
+            description: 'RESTful architecture based APIs'
 
         },
         {
@@ -37,8 +37,10 @@ const ServicesCards = (): JSX.Element => {
         {services.map((service, i) => {
             return <Fragment key={i}>
                 <NeonCard>
-                    <img className='service-image' src={service.image} alt='Service' />
-                    <p className='service-name paragraph paragraph--small paragraph--bold'>{service.name}</p>
+					<div className='card-container'>
+						<img className='service-image' src={service.image} alt='Service' />
+						<p className='service-name paragraph paragraph--small paragraph--bold'>{service.name}</p>
+					 </div>
                 </NeonCard>
             </Fragment>;
         })}

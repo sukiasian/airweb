@@ -54,13 +54,14 @@ const ContactUsForm = () => {
 		const isEmailRegexValid = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i.test(
 			email
 		)
+
 		setEmail(email)
 		setIsEmailValid(isEmailRegexValid)
 	}
 
 	return (
 		<form className='form contact-us-form' onSubmit={handleSubmit}>
-			<p className='paragraph'>Fill out the contact form.</p>
+			<h2 className='heading heading--secondary'>Get in touch</h2>
 
 			<Input
 				className='form__field'
@@ -74,8 +75,8 @@ const ContactUsForm = () => {
 
 			<Input
 				className='form__field'
-				label='Email'
-				placeholder='Email'
+				label='E-mail'
+				placeholder='E-mail'
 				required={true}
 				type='email'
 				value={email}
@@ -84,8 +85,8 @@ const ContactUsForm = () => {
 
 			<TextArea
 				className='form__field'
-				label='Additional Information'
-				placeholder='Additional Information'
+				label='Additional information'
+				placeholder='Additional information'
 				value={additionalInformation}
 				onChange={e => setAdditionalInformation(e.target.value)}
 			/>

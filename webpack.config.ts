@@ -1,5 +1,6 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import SpriteLoaderPlugin from 'svg-sprite-loader/plugin'
 
 module.exports = {
     mode: 'development',
@@ -19,22 +20,22 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/
             },
+			{
+				test: /\.svg$/, 
+				use: ['svg-sprite-loader']
+			},
             {
                 test: /\.(s*)css$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
-            },
-            {
-                test: /\.svg$/,
-                use: 'svg-sprite-loader'
-            },
+            }, 
             {
                 test: /\.(png|jpe?g|gif)$/i,
                 type: 'asset/resource'
-            }
-        ]
+            },
+        ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js']
+        extensions: ['.tsx', '.ts', '.js'], 
     },
     output: {
         filename: 'bundle.js',
@@ -45,7 +46,7 @@ module.exports = {
         port: 3000,
         host: '127.0.0.1',
         open: true,
-        historyApiFallback: true
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -54,6 +55,7 @@ module.exports = {
             filename: 'index.html',
             inject: 'body',
             minify: 'auto'
-        })
-    ]
+        }), 
+		new SpriteLoaderPlugin() 
+	]
 };

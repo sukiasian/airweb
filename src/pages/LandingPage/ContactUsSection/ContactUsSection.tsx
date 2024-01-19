@@ -6,10 +6,7 @@ const ContactUsSection = (): JSX.Element => {
 	return (
 		<BlackBackground>
 			<section id='contact-us' className='contact-us'>
-				<h1 className='heading heading--primary'>Contact us</h1>
-				<p className='paragraph paragraph--thin'>
-					To discuss everything from A to Z
-				</p>
+				<h1 id='contact-us-heading' className='heading heading--primary'>Contact us</h1>
 
 				<div className='contact-options'>
 					<ContactUsForm />

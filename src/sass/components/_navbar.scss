@@ -1,44 +1,29 @@
 .navbar {
 	&-item {
 		border-bottom: 2px solid transparent;
+		justify-items: center;
 
-		&:hover {
-			border-bottom: 2px solid red;
+		&:hover:not(.navbar__logo) {
+			border-bottom: 2px solid rgba($color-primary-1, 0.5);
 		}
 	}
 
 	&__logo {
-		svg {
-			@include respond(tab-port) {}
-		}
+		height: 100%;
+		align-self: center;
 
-		svg {
-			@include respond(phone) {
-				left: 50px;
-				width: 200px;
-				height: 200px;
-			}
+		& svg { 
+			height: 100%;
 		}
-	}
-
+	} 
 
 	&__services {
 		justify-self: end;
 		margin-right: -9rem;
 
-		@include respond(tab-port) {
-			justify-self: start;
-			margin-left: 7rem;
-		}
-
-		@include respond(phone) {
-			justify-self: start;
-			margin-left: 5rem;
-			margin-top: 4rem;
-		}
-
 		@include respond (tab-land) {
 			margin-right: -5rem;
+			display: none;
 		}
 	}
 
@@ -46,26 +31,39 @@
 		justify-self: end;
 		margin-right: 5rem;
 
-		@include respond(tab-port) {}
-
-		@include respond(phone) {
-			justify-self: start;
-			margin-bottom: 1.5rem;
-			margin-left: 4.5rem;
+		@include respond(tab-land) {
+			display: none;
 		}
 	}
 
 	&__list {
 		display: grid;
-		grid-template-rows: 100px;
+		grid-template-rows: 70px;
 		grid-template-columns: 1fr 1fr 1fr;
 		align-items: center;
 		box-shadow: 0 0 1px 3px rgba(209, 209, 209, 0.2);
 		background-color: $color-background-dark-1;
 
 
-		@include respond(phone) {
-			align-items: right;
+		@include respond(tab-land) {
+			// align-items: right;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			height: 80px;
+		}
+
+		& a { 
+			height: 100%;
+
+
+			@include respond(desktop) {
+				margin-left: 2rem;
+			}
+
+			@include respond(phone) {
+				margin-left: none;
+			}
 		}
 
 		& * {

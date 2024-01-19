@@ -4,6 +4,7 @@ import MemberInfo from './MemberInfo';
 import MembersList from './MembersList';
 import { useDispatch } from 'react-redux';
 import { setActiveMemberInfo } from '../../../redux/actions/teamActions';
+import BlackBackground from '../../../hoc/BlackBackground';
 
 const OurTeamSection = (): JSX.Element => {
     const teammates = [
@@ -45,11 +46,11 @@ const OurTeamSection = (): JSX.Element => {
         };
     }, []);
 
-    return <section id='our-team' className='our-team'>
+    return <BlackBackground><section data-scroll-section id='our-team' className='our-team'>
         <SectionHeading right classnames='absolute-right' heading='Our Team' />
         <MembersList teammates={teammates} />
         <MemberInfo />
-    </section>;
+    </section></BlackBackground>;
 };
 
 export default OurTeamSection;

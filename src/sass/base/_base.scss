@@ -36,4 +36,8 @@ li {
 
 section { 
 	margin: 3rem;
+
+	@include respond(phone) { 
+		margin: 0;
+	}
 }

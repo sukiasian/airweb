@@ -6,10 +6,10 @@ interface WhiteCardProps {
 }
 
 const WhiteCard = ({ image, title, description, classnames }: WhiteCardProps): JSX.Element => {
-    return <div className={`${classnames ?? ''} card card--white`}>
-        {image}
-        <p className="paragraph paragraph--large">{title}</p>
-        <p className="paragraph paragraph--small">{description}</p>
+    return <div className={`${classnames ?? ''} card--white`}>
+		{image}
+		<p className="paragraph paragraph--large">{title}</p>
+		<p className="paragraph paragraph--small">{description}</p>
     </div>;
 };
 

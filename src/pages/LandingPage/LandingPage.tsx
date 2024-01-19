@@ -7,7 +7,7 @@ import OurVisionSection from './OurVisionSection/OurVisionSection'
 
 const LandingPage = (): JSX.Element => {
 	return (
-		<div className='page landing'>
+		<div data-scroll-container className='page landing'>
 			<LandingHeader />
 			<OurServicesSection />
 			{/* <OurTechStackSection /> */}

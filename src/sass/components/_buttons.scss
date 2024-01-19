@@ -17,16 +17,16 @@ button {
 	box-shadow: 0 0 1px 3px rgba(209, 209, 209, 0.2);
 
 	&--primary {
-		background-color: $color-primary-blue;
+		background-color: $color-primary-1;
 		color: white;
-		border: 2px solid $color-primary-blue;
+		border: 2px solid $color-primary-1;
 
 		&:hover {
 			animation: fadeOutBlueBackground 0.3s linear both;
 		}
 
 		&:active {
-			background-color: $color-primary-blue;
+			background-color: $color-primary-1;
 		}
 
 		a {
@@ -44,7 +44,7 @@ button {
 	&--disabled {
 		background-color: $box-border-color;
 		color: black;
-		border: 2px solid $color-primary-grey;
+		border: 2px solid $color-background-1;
 		cursor: not-allowed;
 	}
 
@@ -75,7 +75,7 @@ button {
 .contact-us-form button {
 	margin-top: 1.5rem;
 	align-self: center;
-	width: 50%;
+	width: 100%;
 }
 
 @keyframes fadeOutGreenBackground {
@@ -92,12 +92,12 @@ button {
 
 @keyframes fadeOutBlueBackground {
 	from {
-		background-color: $color-primary-blue; /* Starting color (fully opaque red) */
+		background-color: $color-primary-1; /* Starting color (fully opaque red) */
 	}
 
 	to {
 		background-color: transparent; /* Ending color (fully transparent red) */
-		color: $color-primary-blue;
-		border: 2px solid $color-primary-blue;
+		color: $color-primary-1;
+		border: 2px solid $color-primary-1;
 	}
 }

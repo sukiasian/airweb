@@ -30,14 +30,26 @@ textarea {
 	}
 }
 
-.contact-us-form .text-area-container textarea {
-	min-width: 100%;
-	max-width: 100%;
-	min-height: 100px;
-	max-height: 1000px;
-	padding-top: 12px;
+.contact-us-form { 
+
+  	& .text-area-container textarea {
+		min-width: 100%;
+		max-width: 100%;
+		min-height: 100px;
+		max-height: 1000px;
+		padding-top: 12px;
+	} 
+
+	& .heading { 
+		color: black;
+		text-align: left;
+		font-size: 2.7rem;
+		margin-bottom: 2rem;
+	}
 }
 
 .success-image-container {
 	margin-top: 40px;
 }
+
+

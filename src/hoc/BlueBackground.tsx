@@ -3,7 +3,7 @@ interface BlueBackgroundProps {
 }
 
 const BlueBackground = ({ children }: BlueBackgroundProps): JSX.Element => {
-    return <div className="background background--blue">
+    return <div data-scroll-section className="background background--blue">
         {children}
     </div>;
 };

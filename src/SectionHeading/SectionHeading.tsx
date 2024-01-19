@@ -5,7 +5,7 @@ interface SectionHeadingProps {
 }
 
 const SectionHeading = ({ heading, classnames, right }: SectionHeadingProps): JSX.Element => {
-    return <div className={`${classnames ?? ''} section-heading`}>
+    return <div data-scroll-section className={`${classnames ?? ''} section-heading`}>
         { right
             ? (<>
                 <h1 className="heading heading--primary">{heading}</h1>
