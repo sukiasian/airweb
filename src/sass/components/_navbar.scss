@@ -11,7 +11,8 @@
 	&__logo {
 		height: 100%;
 		align-self: center;
-
+		margin-left: 1rem;
+		
 		& svg { 
 			height: 100%;
 		}
@@ -19,10 +20,9 @@
 
 	&__services {
 		justify-self: end;
-		margin-right: -9rem;
 
 		@include respond (tab-land) {
-			margin-right: -5rem;
+			// margin-right: -5rem;
 			display: none;
 		}
 	}
@@ -39,7 +39,7 @@
 	&__list {
 		display: grid;
 		grid-template-rows: 70px;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 3fr 1fr 1fr;
 		align-items: center;
 		box-shadow: 0 0 1px 3px rgba(209, 209, 209, 0.2);
 		background-color: $color-background-dark-1;
@@ -58,7 +58,7 @@
 
 
 			@include respond(desktop) {
-				margin-left: 2rem;
+				// margin-left: 2rem;
 			}
 
 			@include respond(phone) {

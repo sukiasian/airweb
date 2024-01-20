@@ -46,6 +46,10 @@ body {
 	&--large {
 		font-size: 2rem;
 	}
+
+	&--light { 
+		color: $color-grey-light;
+	}
 }
 
 a {

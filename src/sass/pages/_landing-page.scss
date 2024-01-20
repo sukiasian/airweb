@@ -1,18 +1,20 @@
 .landing-header {
-	
 	width: 100vw;
 	position: relative;
-}
+	// height: 450px;
+    overflow: hidden;
 
-#landing-background { 
-	position: absolute;	
-	width: 100vw;
-	height: 100%;
+	@include respond(big-desktop) {
+		// height: 470px;
+	}
 }
 
 .cta { 
-	height: 100%;
+	width: 100%;
+	// height: 100%;
 	padding: 3rem 3rem;
+	position: absolute;
+	top: 0; 
 
 	@include respond(phone) { 
 		padding: 1rem 0;
@@ -79,25 +81,60 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: -2rem;
+	&-container {
+		display: flex;
+		flex-direction: column;
+	}
 }
+
+.role-container { 
+	// position: relative;
+
+	& p { 
+		display: inline-block;
+		position: absolute;
+	}
+}
+
+#teammate-role { 
+	display: inline-block;
+}
+
+.teammate { 
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+
+	& .paragraph--large:hover:not(.active) {
+		border-bottom: 2px solid rgba($color-primary-1, 0.5);
+	} 
+}
+
 
 .our-team__members {
 	display: flex;
-	justify-content: space-around;
+	flex-direction: row;
+	// justify-content: space-around;
 	width: 70vw;
 	color: white;
 	font-weight: 500;
 	text-transform: uppercase;
 	margin-bottom: 2rem;
+		
+	@include respond(tab-land) { 
+		flex-direction: column;
+		align-items: center;
+	}
 
 	& * {
 		cursor: pointer;
 		border: 2px solid transparent;
 
 
-		&:hover:not(.active) {
-			border-bottom: 2px solid rgba($color-primary-1, 0.5);
-		}
+		// &:hover:not(.active) {
+		// 	border-bottom: 2px solid rgba($color-primary-1, 0.5);
+		// }
 
 		@include respond(tab-port) {
 			font-size: 2rem;
@@ -118,13 +155,16 @@
 	}
 }
 
+
+
 .member-info {
 	display: grid;
+	place-items: center;
 	grid-template-columns: 1fr 3fr;
 	column-gap: 4rem;
 	grid-template-rows: max-content;
 
-	@include respond(phone) { 
+	@include respond(tab-port) { 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
