@@ -3,16 +3,18 @@
 		border-bottom: 2px solid transparent;
 		justify-items: center;
 
-		&:hover:not(.navbar__logo) {
-			border-bottom: 2px solid rgba($color-primary-1, 0.5);
+		@include respond(desktop) { 
+			&:hover:not(.navbar__logo) {
+				border-bottom: 2px solid rgba($color-primary-1, 0.5);
+			}
 		}
 	}
 
 	&__logo {
 		height: 100%;
 		align-self: center;
-		margin-left: 1rem;
-		
+		// margin-left: 1rem;
+
 		& svg { 
 			height: 100%;
 		}

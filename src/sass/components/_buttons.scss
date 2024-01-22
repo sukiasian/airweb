@@ -5,8 +5,10 @@ button {
 	border-radius: 25px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-	&:hover {
-		cursor: pointer;
+	@include respond(desktop) { 
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
 
@@ -21,12 +23,14 @@ button {
 		color: white;
 		border: 2px solid $color-primary-1;
 
-		&:hover {
-			animation: fadeOutBlueBackground 0.3s linear both;
-		}
-
-		&:active {
-			background-color: $color-primary-1;
+		@include respond(desktop) { 	
+			&:hover {
+				animation: fadeOutBlueBackground 0.3s linear both;
+			}
+			
+			&:active {
+				background-color: $color-primary-1;
+			}
 		}
 
 		a {
@@ -36,7 +40,7 @@ button {
 		@include respond(phone) {
 			padding: 1.2rem 0.5rem;
 			width: 55px;
-			height: 55px;
+			// height: 55px;
 			border-radius: 70px;
 		}
 	}
@@ -67,8 +71,10 @@ button {
 	background-color: $color-validator-allowed;
 	color: white;
 
-	&:hover {
-		animation: fadeOutGreenBackground 0.3s linear both;
+	@include respond(desktop) {
+		&:hover {
+			animation: fadeOutGreenBackground 0.3s linear both;
+		}
 	}
 }
 

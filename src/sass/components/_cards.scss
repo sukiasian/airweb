@@ -79,12 +79,14 @@
 		transition: opacity 0.3s ease;
 		width: 80%;
 
-		&:hover {
-			-webkit-animation: card 0.1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-			animation: card 0.1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-
-			// NOTE make a magic wand cursor
-			// cursor: url('../../assets/'), auto
+		@include respond(desktop) { 
+			&:hover {
+				-webkit-animation: card 0.1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+				animation: card 0.1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+				
+				// NOTE make a magic wand cursor
+				// cursor: url('../../assets/'), auto
+			}
 		}
 	}
 }

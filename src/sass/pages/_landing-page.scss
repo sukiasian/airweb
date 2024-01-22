@@ -106,8 +106,10 @@
 	display: flex;
 	flex-direction: column;
 
-	& .paragraph--large:hover:not(.active) {
-		border-bottom: 2px solid rgba($color-primary-1, 0.5);
+	@include respond(desktop) {
+		& .paragraph--large:hover:not(.active) {
+			border-bottom: 2px solid rgba($color-primary-1, 0.5);
+		} 
 	} 
 }
 
