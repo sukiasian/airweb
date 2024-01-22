@@ -4,15 +4,17 @@ interface PrimaryButtonProps {
 	text: string
 	clickHandler?: MouseEventHandler
 	className?: string
+	type?: "button" | "submit" | "reset"
 }
 
 const PrimaryButton = ({
 	text,
 	clickHandler,
 	className,
+	type
 }: PrimaryButtonProps): JSX.Element => {
 	return (
-		<button className={`${className}`} onClick={clickHandler}>
+		<button type={type ?? 'button'} className={`${className}`} onClick={clickHandler}>
 			{text}
 		</button>
 	)

@@ -53,6 +53,7 @@ module.exports = {
             template: path.resolve(__dirname, 'public', 'index.html'),
             title: 'Airweb Development Agency - Get the maximum from tech',
             filename: 'index.html',
+			favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
             inject: 'body',
             minify: 'auto'
         }), 

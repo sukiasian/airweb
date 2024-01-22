@@ -3,7 +3,7 @@ import { useState } from 'react'
 import PrimaryButton from '../../buttons/PrimaryButton'
 import Input from '../Input'
 import TextArea from '../TextArea'
-import './../../../assets/images/success.svg'
+import './../../../assets/images/success.png'
 
 const ContactUsForm = () => {
 	const [name, setName] = useState('')
@@ -27,7 +27,7 @@ const ContactUsForm = () => {
 		}
 
 		try {
-			const response = await axios.post('http://localhost:5000/contact', {
+			const response = await axios.post('/contact', {
 				name,
 				email,
 				additionalInformation,
@@ -92,6 +92,7 @@ const ContactUsForm = () => {
 			/>
 			<PrimaryButton
 				text='contact'
+				type='submit'
 				className={
 					isFormValid ? 'button button--primary' : 'button button--disabled'
 				}
@@ -99,9 +100,10 @@ const ContactUsForm = () => {
 
 			{isFormValid && isFormSubmitted && (
 				<div className='success-image-container'>
-					<svg style={{ width: '80px', height: '80px' }}>
+					{/* <svg style={{ width: '80px', height: '80px' }}>
 						<use href={`#success`} />
-					</svg>
+					</svg> */}
+					<img src={require('../../../assets/images/success.png')} />
 				</div>
 			)}
 		</form>
