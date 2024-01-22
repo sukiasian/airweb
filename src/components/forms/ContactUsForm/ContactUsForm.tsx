@@ -100,10 +100,7 @@ const ContactUsForm = () => {
 
 			{isFormValid && isFormSubmitted && (
 				<div className='success-image-container'>
-					{/* <svg style={{ width: '80px', height: '80px' }}>
-						<use href={`#success`} />
-					</svg> */}
-					<img src={require('../../../assets/images/success.png')} />
+					<img id="success-icon" src={require('../../../assets/images/success.png')} />
 				</div>
 			)}
 		</form>
