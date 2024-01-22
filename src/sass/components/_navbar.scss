@@ -15,6 +15,10 @@
 		align-self: center;
 		// margin-left: 1rem;
 
+		@include respond(desktop) { 
+			margin-left: 1rem;
+		}
+
 		& svg { 
 			height: 100%;
 		}
