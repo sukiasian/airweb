@@ -7,8 +7,9 @@ textarea {
 	border: 1px solid gainsboro;
 	box-shadow: 0 1px 3px rgba(209, 209, 209, 0.2);
 
-	&:focus {
-		outline: 1px solid red;
+	&:focus, &:focus {
+		border: 1px solid red;
+		outline: none;
 	}
 }
 
