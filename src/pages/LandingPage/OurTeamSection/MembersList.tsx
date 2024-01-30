@@ -60,9 +60,7 @@ const MembersList = ({ teammates }: MembersListProps): JSX.Element => {
             		return (
 						<div className='teammate' key={i}>
 							<p ref={roleRef} id='teammate-role' className='paragraph paragraph--light' style={{ visibility: active ? 'visible' : 'hidden' }}>{teammates[i].role}</p>
-							<div>
-                				<p className={`paragraph paragraph--large ${active ? 'active' : ''}`} onClick={setActiveMate(mate, i)}>{mate.name}</p>
-							</div>
+                			<p className={`teammate-name paragraph paragraph--large ${active ? 'active' : ''}`} onClick={setActiveMate(mate, i)}>{mate.name}</p>
             			</div>
 					);
         		})}

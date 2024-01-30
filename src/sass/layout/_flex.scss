@@ -41,3 +41,13 @@
     align-items: center;
     margin-top: 3rem;
 }
+
+.flex-container {
+	display: flex;
+}
+
+.flex-container--centered {
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}

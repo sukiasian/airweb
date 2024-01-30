@@ -14,7 +14,7 @@ const PrimaryButton = ({
 	type
 }: PrimaryButtonProps): JSX.Element => {
 	return (
-		<button type={type ?? 'button'} className={`${className}`} onClick={clickHandler}>
+		<button type={type ?? 'button'} className={`button button--primary ${className}`} onClick={clickHandler}>
 			{text}
 		</button>
 	)

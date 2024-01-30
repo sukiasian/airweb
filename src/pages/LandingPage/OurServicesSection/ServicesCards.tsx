@@ -39,7 +39,7 @@ const ServicesCards = (): JSX.Element => {
                 <NeonCard>
 					<div className='card-container'>
 						<img className='service-image' src={service.image} alt='Service' />
-						<p className='service-name paragraph paragraph--small paragraph--bold'>{service.name}</p>
+						<p className='service-name paragraph paragraph--small'>{service.name}</p>
 					 </div>
                 </NeonCard>
             </Fragment>;

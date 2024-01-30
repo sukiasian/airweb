@@ -50,6 +50,10 @@ body {
 	&--light { 
 		color: $color-grey-light;
 	}
+
+	&--bold { 
+		font-weight: 900;
+	}
 }
 
 a {
@@ -88,7 +92,7 @@ a {
 		}
 
 		@include respond(tab-land) {
-			margin: 2rem;
+			margin-bottom: 2rem;
 		}
 
 	}

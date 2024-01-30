@@ -1,9 +1,10 @@
 interface BlackBackgroundProps {
     children: JSX.Element
+	classnames?: string
 }
 
-const BlackBackground = ({ children }: BlackBackgroundProps): JSX.Element => {
-    return <div className="background background--black">
+const BlackBackground = ({ children, classnames }: BlackBackgroundProps): JSX.Element => {
+    return <div className={`background background--black ${classnames ?? ''}`}>
         {children}
     </div>;
 };

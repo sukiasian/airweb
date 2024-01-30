@@ -1,0 +1,50 @@
+.cookie-consent { 
+	background: linear-gradient(45deg, $color-primary-1, $color-primary-2);
+	width: 80%;
+	padding: 2rem;
+	display: flex;
+	flex-direction: row;
+	border-radius: 25px;
+	justify-content: center;
+
+	@include respond(phone) { 
+		flex-direction: column;
+		align-items: center;
+	}
+
+	& button { 
+		padding: 1rem 1.2rem;
+
+		@include respond(phone) { 
+			padding: 1rem 1.2rem !important;
+			width: auto;
+			margin-top: 1.5rem;
+		}
+	}
+
+	& .button-container { 
+		padding: 1rem;
+	}
+
+	&-container { 
+		display: flex;
+		justify-content: center;
+		position: fixed;
+		bottom: 20px;
+		z-index: 1000;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+	}
+
+	&__text { 
+		color: white;
+		font-weight: 500;
+		text-align: left;
+		align-self: center;
+
+		@include respond(phone) { 
+			text-align: center;
+		}
+	}
+}

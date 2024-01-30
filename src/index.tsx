@@ -9,8 +9,8 @@ const root = ReactDOM.createRoot(document.getElementById('root') as Element)
 
 root.render(
 	<Provider store={store}>
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
 	</Provider>
 )
