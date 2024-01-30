@@ -8,7 +8,7 @@ import BackendSection from './BackendSection';
 
 const StackCarousel = (): JSX.Element => {
     const developmentSections = ['Frontend', 'Backend', 'Mobile'];
-	const refreshRateInMs = 30000;
+	const refreshRateInMs = 7000;
 
     const { activeTab } = useSelector((state: ReduxState) => state.stackCarouselReducer);
 	
