@@ -52,7 +52,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html'),
-            title: 'Airweb Development Agency - Get the maximum from tech',
+            title: 'Airweb Agency - Web & mobile software developement agency',
             filename: 'index.html',
 			favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
             inject: 'body',
