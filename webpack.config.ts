@@ -1,6 +1,7 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import SpriteLoaderPlugin from 'svg-sprite-loader/plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 module.exports = {
     mode: 'development',
@@ -57,6 +58,18 @@ module.exports = {
             inject: 'body',
             minify: 'auto'
         }), 
-		new SpriteLoaderPlugin() 
+		new SpriteLoaderPlugin(), 
+		new CopyWebpackPlugin({
+			patterns: [{ 
+				from: 'public', 
+			  	to: '', 
+			  	globOptions: {
+					ignore: [
+						'**/favicon.ico',
+						'**/index.html'
+					]
+				}
+			}],
+		}),
 	]
 };
